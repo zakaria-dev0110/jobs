@@ -1,6 +1,5 @@
 <x-layout>
     <x-slot:content>
-        @foreach($jobs as $job)
         <div class="card m-4">
             <div class="card-header">
                 {{ $job['title'] }}
@@ -9,10 +8,8 @@
                 <h5 class="card-title">{{ $job['salary'] }}</h5>
             </div>
             <div class="d-flex justify-content-center align-items-center">
-                <a href="jobs/{{ $job['id'] }}" class="btn btn-primary m-2">Show</a>
-                <a href='jobs/{{ $job['id'] }}/edit' class="btn btn-success m-2">update</a>
+                <a href="/jobs" class="btn btn-secondary m-2">Back</a>
             </div>
         </div>
-        @endforeach
     </x-slot:content>
 </x-layout>

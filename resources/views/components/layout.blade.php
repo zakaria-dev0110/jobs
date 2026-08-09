@@ -8,13 +8,13 @@
     </head>
     <ul class="nav nav-pills p-4">
         <li class="nav-item">
-            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+            <a class="nav-link {{ request()->is('jobs') ? 'active' : '' }}" aria-current="page" href="/jobs">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link {{ request()->is('jobs/create') ? 'active' : '' }}" href="/jobs/create">Create</a>
         </li>
     </ul>
-    <div class="d-flex justify-content-center align-items-center min-vh-10">
+    <div class="m-4">
         {{ $content }}
     </div>
 </html>
