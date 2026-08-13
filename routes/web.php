@@ -35,6 +35,12 @@ Route::patch('/jobs/{id}', function($id) {
     return redirect('/jobs/'.$id);
 });
 
+Route::delete('/jobs/{id}', function($id) {
+    $job = Job::findOrFail($id);
+    $job->delete();
+    return redirect('/jobs');
+});
+
 Route::get('/jobs/{id}', function($id){
     $jobs = Job::all();
     $job = $jobs->find($id);
